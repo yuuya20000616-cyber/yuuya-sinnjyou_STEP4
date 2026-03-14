@@ -11,13 +11,13 @@
 
    if ($name === '') {
        $errors[] = '名前を入力してください。';
-   } elseif (!preg_match('/^[あ-んア-ケ一龠a-zA-Zー\s]+$/u', $name)) {
+   } elseif (!preg_match('/^[あ-んア-ン一-龠a-zA-Zー\s]+$/u', $name)) {
        $errors[] = '名前はひらがな、カタカナ、漢字、英字のみ使用できます。';
    }
 
    if ($age === '') {
        $errors[] = '年齢を入力してください。';
-   } elseif (!filter_var($age, FILTER_VALIDATE_INT) || $age < 0 || $age > 150) {
+   } elseif (!filter_var($age, FILTER_VALIDATE_INT) === false || $age < 0 || $age > 150) {
        $errors[] = '年齢は0から150の間で入力してください。';
    }
 
@@ -35,7 +35,7 @@
 
    if ($address === '') {
        $errors[] = '住所を入力してください。';
-   } elseif (!preg_match('/^[あ-んア-ケ一龠a-zA-Z\s\-]+$/u', $address)) {
+   } elseif (!preg_match('/^[あ-んア-ン一-龠a-zA-Z\s\-]+$/u', $address)) {
        $errors[] = '住所はひらがな、カタカナ、漢字、英字のみ使用できます。';
    }
 
@@ -50,7 +50,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF=8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>入力内容確認</title>
     <link rel="stylesheet" href="style.css">
