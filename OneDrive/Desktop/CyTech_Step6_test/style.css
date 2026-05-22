@@ -1,0 +1,26 @@
+body {
+    font-family: sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+th {
+    background-color: lightgray;
+}
+
+input,
+textarea {
+    padding: 5px;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 20px;
+}
